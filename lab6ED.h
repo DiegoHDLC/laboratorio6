@@ -5,11 +5,57 @@
 typedef struct _structArreglo{
   char *texto;
 }Dato;
+
 //prototipos
 int contadorDatos(FILE *);
 Dato *inicializaArreglo(int);
 void imprimirArreglo(Dato *, int);
 Dato *almacenarDatosEnArreglo(FILE *, Dato *);
+//int *frecuenciaDatos(Dato *, int);
+int verificaRepeticion(char *,char , int );
+
+/*int *frecuenciaDatos(Dato *arreglo, int tamano){
+  char *arregloAux = malloc(sizeof(char)*tamano);
+  for(int i = 0; i < tamano; i++){
+    arregloAux[i] = '\0';
+    printf("arregloAux[%i]: %c\n", i, arregloAux[i]);
+  }
+  int *arregloFrecuencias = malloc(sizeof(char)*tamano);
+  for(int i = 0; i < tamano; i++){
+    arregloFrecuencias[i] = '\0';
+    printf("arregloFrecuencias[%i]: %i\n", i, arregloFrecuencias[i]);
+  }
+  char terminoAux;
+  int frecuencia = 0;
+  printf("\nentra\n");
+  for(int i = 0; i < tamano; i++){
+    printf("\nentra\n");
+    frecuencia = 0;
+    terminoAux = arreglo->texto[i];
+    arregloAux[i] = arreglo->texto[i];
+    if(verificaRepeticion(arregloAux, terminoAux, tamano)){
+      for(int j = 0; j < tamano; j++){
+        if(arreglo->texto[j] == terminoAux){
+          frecuencia++;
+        }
+      }
+      arregloFrecuencias[i] = frecuencia;
+    }
+  }
+  return arregloFrecuencias;
+}*/
+
+/*int verificaRepeticion(char *arregloAux, char terminoAux, int tamano){
+  int i = 0;
+  while(i < tamano){
+    if(arregloAux[i] == terminoAux){
+      return 0;
+    }
+    i++;
+  }
+  return 1;
+}*/
+
 
 int contadorDatos(FILE *p){
   int i=0;

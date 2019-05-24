@@ -8,14 +8,17 @@ int main(int argc, char const *argv[]) {
   p = fopen("textoArbol.txt","r");
   printf("tamano: %i\n", tamano);
   Dato *arreglo = inicializaArreglo(tamano);
+  /*imprimirArreglo(arreglo,tamano);
+  int *arregloFrecuencias = malloc(sizeof(char)*tamano);
+  for(int i = 0; i < tamano; i++){
+    arregloFrecuencias[i] = '\0';
+  }
+*/
   arreglo = almacenarDatosEnArreglo(p,arreglo);
-  frecuenciaDatos(arreglo);
-  //almacenarDatosEnArreglo(p,arreglo);
-  //printf("%c\n", arreglo->valor);
-
-  //arreglo = almacenarDatosEnArreglo(p);
-
   imprimirArreglo(arreglo,tamano);
+  /*arregloFrecuencias = frecuenciaDatos(arreglo,tamano);
+
+  imprimirArreglo(arreglo,tamano);*/
   fclose(p);
   return 0;
 }
